@@ -1,0 +1,30 @@
+/* Style for the very first section of the page */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: purple;
+
+    @media (min-width: 768px) {
+        margin-bottom: 6px;
+    }
+    @media (min-width: 992px) {
+        width: 992px;
+    }
+    @media (min-width: 1260px) {
+        width: 1260px;
+        margin-bottom: 18px;
+    }    
+}
+/* Is a container for burger menu mobile and logo */
+.left {
+    display: flex;
+}
+/* Style the Logo */
+.logo {
+    height: 40px;
+    margin-left: 5px;    
+
+    @media (min-width: 992px) {
+        width: 150px;
+    }
+}

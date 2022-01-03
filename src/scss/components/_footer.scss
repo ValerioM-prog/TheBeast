@@ -1,0 +1,105 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 100%;
+
+    .accordion {
+        max-width: 100%;
+        border-radius: 5px;
+        background: #009578;
+        display: grid;
+
+        div {
+            width: 100%;
+        }
+
+        .accordion-label,
+        .accordion-content {
+            padding: 14px 20px;
+        }
+
+        .accordion-label {
+            display: block;
+            color: #ffffff;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            transition: background .1s;
+            &:hover {
+                background: rgba(0, 0, 0, .1);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+                width: 12px;
+                height: 6px;
+                background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+                background-size: contain;
+                transition: transform .4s;
+            }
+        }
+
+        .accordion-content {
+            background: #ffffff;
+            line-height: 1.6;
+            font-size: .85em;
+            display: none;
+        }
+
+        .accordion-input {
+            display: none;
+
+            &:checked ~ .accordion-content {
+                display: block;
+            }
+
+            &:checked ~ .accordion-label::after {
+                transform: translateY(-50%) rotate(.5turn);
+            }
+        }
+
+        @media (min-width: 768px) {            
+            grid-template-columns: repeat(4, 1fr);
+
+            .accordion-content {
+                display: block;
+                text-align: center;
+            }
+
+            .accordion-label {
+                font-size: 1.5vw;
+                text-align: center;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        @media (min-width: 992px) {
+            max-width: 992px;
+        }
+        @media (min-width: 1260px) {
+            max-width: 1260px;
+        }
+    }
+
+    .footmark {
+        width: 100%;
+        justify-self: center;
+        margin: 50px auto;
+        font-size: 1.5vw;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            font-size: 1vw;
+        }
+    }
+}

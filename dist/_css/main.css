@@ -1,0 +1,659 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Style for the very first section of the page */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: purple;
+}
+@media (min-width: 768px) {
+  .heading {
+    margin-bottom: 6px;
+  }
+}
+@media (min-width: 992px) {
+  .heading {
+    width: 992px;
+  }
+}
+@media (min-width: 1260px) {
+  .heading {
+    width: 1260px;
+    margin-bottom: 18px;
+  }
+}
+
+/* Is a container for burger menu mobile and logo */
+.left {
+  display: flex;
+}
+
+/* Style the Logo */
+.logo {
+  height: 40px;
+  margin-left: 5px;
+}
+@media (min-width: 992px) {
+  .logo {
+    width: 150px;
+  }
+}
+
+/* Burger Menu Style*/
+.burgerMenu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* The middle line */
+}
+.burgerMenu > span {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  /*transition: all .5s ease-in-out;*/
+  /* Both the top and bottom lines*/
+  /* Top line */
+  /* Bottom line */
+}
+.burgerMenu > span::before, .burgerMenu > span::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+}
+.burgerMenu > span::before {
+  transform: translateY(-8px);
+}
+.burgerMenu > span::after {
+  transform: translateY(8px);
+}
+.burgerMenu.open > span {
+  transform: scale(0px, 0px);
+  background: transparent;
+}
+.burgerMenu.open > span::before {
+  transform: rotate(45deg);
+}
+.burgerMenu.open > span::after {
+  transform: rotate(-45deg);
+}
+@media (min-width: 768px) {
+  .burgerMenu {
+    display: none;
+  }
+}
+
+/* Style Burger Menu 2 */
+.burgerMenu-2 {
+  width: 38px;
+  height: 38px;
+  border: 1px solid black;
+  border-bottom: none;
+  border-right: none;
+  box-sizing: content-box;
+  border-radius: 10px 0 0 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.burgerMenu-2 > span {
+  width: 15px;
+  height: 2px;
+  background-color: black;
+  box-sizing: border-box;
+  /*transition: all .5s ease-in-out;*/
+}
+.burgerMenu-2 > span::before, .burgerMenu-2 > span::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: black;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+}
+.burgerMenu-2 > span::before {
+  transform: translateY(-4px);
+}
+.burgerMenu-2 > span::after {
+  transform: translateY(4px);
+}
+.burgerMenu-2.open > span {
+  transform: scale(0px, 0px);
+  background: transparent;
+}
+.burgerMenu-2.open > span::before {
+  transform: rotate(45deg);
+}
+.burgerMenu-2.open > span::after {
+  transform: rotate(-45deg);
+}
+
+/* Style the navigation bar */
+.navMenu {
+  position: relative;
+  display: none;
+  margin-bottom: 6px;
+}
+@media (min-width: 768px) {
+  .navMenu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: black;
+  }
+}
+@media (min-width: 992px) {
+  .navMenu {
+    width: 992px;
+  }
+}
+@media (min-width: 1260px) {
+  .navMenu {
+    width: 1260px;
+    margin-bottom: 18px;
+  }
+}
+.navMenu > a {
+  text-decoration: none;
+  color: black;
+  background-color: #e092cf;
+  margin: 0 5px;
+  padding: 6px 20px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.navMenu > :nth-child(2) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  align-items: center;
+  padding: 10px 75px;
+  background-color: white;
+  border: 1px solid black;
+  border-bottom: none;
+  border-left: none;
+  box-sizing: border-box;
+  border-radius: 0 10px 0 0;
+}
+.navMenu > :nth-child(6) {
+  position: absolute;
+  right: 0;
+  background-color: purple;
+}
+
+/* Style the Top Holder for mega menu and image slider */
+.topHolder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 6px;
+  /* Style the mega menu */
+  /* Style the image slider */
+}
+@media (min-width: 992px) {
+  .topHolder {
+    width: 992px;
+  }
+}
+@media (min-width: 1260px) {
+  .topHolder {
+    width: 1260px;
+    margin-bottom: 18px;
+  }
+}
+.topHolder .menuUnderlay {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 500vh;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.topHolder .menuUnderlay.open {
+  transform: translateX(0);
+}
+@media (min-width: 992px) {
+  .topHolder .menuUnderlay {
+    display: none;
+  }
+}
+.topHolder nav.mainMenu {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+.topHolder nav.mainMenu.open {
+  transform: translateX(0);
+}
+.topHolder nav.mainMenu a div {
+  width: 225px;
+  height: 36px;
+  background-color: #edff86;
+}
+@media (min-width: 1260px) {
+  .topHolder nav.mainMenu a div {
+    width: 300px;
+    height: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .topHolder nav.mainMenu {
+    position: relative;
+    transform: translateX(0);
+  }
+}
+.topHolder .imageHolder {
+  position: relative;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  .topHolder .imageHolder {
+    width: 768px;
+  }
+}
+@media (min-width: 1260px) {
+  .topHolder .imageHolder {
+    width: 960px;
+  }
+}
+.topHolder .imageHolder img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.topHolder .imageHolder img.active {
+  animation: fadeIn 1s;
+  opacity: 1;
+}
+.topHolder .imageHolder img.fadeOut {
+  animation: fadeOut 1s;
+  opacity: 0;
+}
+.topHolder .imageHolder > :nth-child(1) {
+  position: relative;
+}
+.topHolder .image-slide {
+  position: absolute;
+  top: 15px;
+  left: 300px;
+}
+.topHolder .image-slide > img {
+  position: absolute;
+}
+.topHolder .imageButtons {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  display: flex;
+  gap: 3px;
+}
+.topHolder .imageButtons .button {
+  width: 30px;
+  height: 10px;
+  box-sizing: border-box;
+  border: 3px solid black;
+  background-color: black;
+}
+.topHolder .imageButtons .button.active {
+  background-color: red;
+}
+@media (min-width: 768px) {
+  .topHolder .imageButtons .button {
+    width: 40px;
+    height: 15px;
+    border: 4px solid black;
+  }
+}
+@media (min-width: 992px) {
+  .topHolder .imageButtons {
+    bottom: 12px;
+  }
+}
+@media (min-width: 1260px) {
+  .topHolder .imageButtons {
+    bottom: 2px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* User Input Holder */
+.right {
+  width: 85%;
+  display: flex;
+  justify-content: right;
+}
+
+/* Search style for tablet and greater */
+.searchBig {
+  display: none;
+}
+@media (min-width: 768px) {
+  .searchBig {
+    display: inline;
+    width: 70%;
+    height: 40px;
+    margin: 0 4px;
+    padding: 0;
+    background-color: #53d35c;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1260px) {
+  .searchBig {
+    width: 60%;
+  }
+}
+
+/* Account button style */
+.account {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin: 0 4px;
+  padding: 0;
+  background-color: #4a9fe7;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .account {
+    display: inline;
+  }
+}
+@media (min-width: 1260px) {
+  .account {
+    width: 130px;
+  }
+}
+
+/* Search button style for mobile */
+.searchMobile {
+  width: 40px;
+  height: 40px;
+  margin: 0 4px;
+  padding: 0;
+  background-color: #53d35c;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .searchMobile {
+    display: none;
+  }
+}
+
+/* Favourites button style for mobile */
+.favourites {
+  width: 40px;
+  height: 40px;
+  margin: 0 4px;
+  padding: 0;
+  background-color: red;
+  border-radius: 10px;
+}
+@media (min-width: 1260px) {
+  .favourites {
+    width: 130px;
+  }
+}
+
+/* Cart button style for mobile */
+.cartButton {
+  width: 40px;
+  height: 40px;
+  margin-left: 4px;
+  padding: 0;
+  background-color: #ff5500;
+  border-radius: 10px;
+}
+@media (min-width: 1260px) {
+  .cartButton {
+    width: 130px;
+  }
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.slider > h1 {
+  padding: 10px 0;
+}
+@media (min-width: 1260px) {
+  .slider {
+    margin-bottom: 18px;
+  }
+}
+
+.feature {
+  width: 100%;
+  height: 30px;
+}
+@media (min-width: 768px) {
+  .feature {
+    height: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .feature {
+    width: 992px;
+  }
+}
+@media (min-width: 1260px) {
+  .feature {
+    width: 1260px;
+  }
+}
+.feature .inner-slider {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 15px;
+  position: absolute;
+}
+.feature .inner-slider .features {
+  min-width: 240px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+@media (min-width: 768px) {
+  .feature .inner-slider .features {
+    height: 60px;
+  }
+}
+
+.product {
+  width: 100%;
+  height: 235px;
+}
+.product .inner-slider {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 7px;
+  position: absolute;
+}
+.product .inner-slider .slide-product {
+  min-width: 310px;
+  height: 235px;
+  background-color: black;
+}
+@media (min-width: 992px) {
+  .product {
+    width: 992px;
+  }
+}
+@media (min-width: 1260px) {
+  .product {
+    width: 1260px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+}
+.footer .accordion {
+  max-width: 100%;
+  border-radius: 5px;
+  background: #009578;
+  display: grid;
+}
+.footer .accordion div {
+  width: 100%;
+}
+.footer .accordion .accordion-label,
+.footer .accordion .accordion-content {
+  padding: 14px 20px;
+}
+.footer .accordion .accordion-label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s;
+}
+.footer .accordion .accordion-label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.footer .accordion .accordion-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 12px;
+  height: 6px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+  background-size: contain;
+  transition: transform 0.4s;
+}
+.footer .accordion .accordion-content {
+  background: #ffffff;
+  line-height: 1.6;
+  font-size: 0.85em;
+  display: none;
+}
+.footer .accordion .accordion-input {
+  display: none;
+}
+.footer .accordion .accordion-input:checked ~ .accordion-content {
+  display: block;
+}
+.footer .accordion .accordion-input:checked ~ .accordion-label::after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+@media (min-width: 768px) {
+  .footer .accordion {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer .accordion .accordion-content {
+    display: block;
+    text-align: center;
+  }
+  .footer .accordion .accordion-label {
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  .footer .accordion .accordion-label::after {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .footer .accordion {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1260px) {
+  .footer .accordion {
+    max-width: 1260px;
+  }
+}
+.footer .footmark {
+  width: 100%;
+  justify-self: center;
+  margin: 50px auto;
+  font-size: 1.5vw;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .footer .footmark {
+    font-size: 1vw;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

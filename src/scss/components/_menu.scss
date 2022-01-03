@@ -1,0 +1,327 @@
+/* Burger Menu Style*/
+.burgerMenu {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    border: 2px solid black;
+    border-radius: .5em;
+    box-sizing: border-box;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* The middle line */
+    & > span {
+        width: 30px;
+        height: 5px;
+        background-color: black;
+        border-radius: .5em;
+        box-sizing: border-box;
+        /*transition: all .5s ease-in-out;*/
+
+        /* Both the top and bottom lines*/
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background-color: black;
+            border-radius: .5em;
+            box-sizing: border-box;
+            transition: all .1s ease-in-out;
+        }
+
+        /* Top line */
+        &::before {
+            transform: translateY(-8px);
+        }
+
+        /* Bottom line */
+        &::after {
+            transform: translateY(8px);
+        }
+    }
+
+    &.open {
+        > span {
+            transform: scale(0px, 0px);
+            background: transparent;
+
+            &::before{
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }        
+    } 
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+}
+/* Style Burger Menu 2 */
+.burgerMenu-2 {
+    width: 38px;
+    height: 38px;
+    border: 1px solid black;
+    border-bottom: none;
+    border-right: none;
+    box-sizing:content-box;
+    border-radius: 10px 0 0 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > span {
+        width: 15px;
+        height: 2px;
+        background-color: black;
+        box-sizing: border-box;
+        /*transition: all .5s ease-in-out;*/
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            background-color: black;
+            border-radius: .5em;
+            box-sizing: border-box;
+            transition: all .1s ease-in-out;
+        }
+        &::before {
+            transform: translateY(-4px);
+        }
+        
+        &::after {
+            transform: translateY(4px);
+        }
+
+        
+    }
+    
+    &.open {
+        > span {
+            transform: scale(0px, 0px);
+            background: transparent;
+
+            &::before{
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }        
+    } 
+}
+/* Style the navigation bar */
+.navMenu {
+    position: relative;
+    display: none;
+    margin-bottom: 6px;    
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        background-color: black;
+    }
+    @media (min-width: 992px) {
+        width: 992px;
+    }
+    @media (min-width: 1260px) {
+        width: 1260px;
+        margin-bottom: 18px;
+    } 
+
+    & > a {
+        text-decoration: none;
+        color: black;
+        background-color: rgb(224, 146, 207);
+        margin: 0 5px;
+        padding: 6px 20px;
+        border: 1px solid white;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    & > :nth-child(2) {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        align-items: center;
+        padding: 10px 75px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-bottom: none;
+        border-left: none;
+        box-sizing: border-box;
+        border-radius: 0 10px 0 0;        
+    }
+
+    & > :nth-child(6) {
+        position: absolute;
+        right: 0;
+        background-color: purple;        
+    }
+}
+/* Style the Top Holder for mega menu and image slider */
+.topHolder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 6px;
+    @media (min-width: 992px) {
+        width: 992px;
+    }
+    @media (min-width: 1260px) {
+        width: 1260px;
+        margin-bottom: 18px;
+    } 
+    /* Style the mega menu */
+    .menuUnderlay {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 500vh;
+        transform: translateX(-100%);
+        transition: transform .5s ease-in-out;
+        background-color: rgba(0,0,0, .8);
+
+        &.open {
+            transform: translateX(0);
+        }
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    nav.mainMenu {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform .5s ease-in-out;
+
+        &.open {
+            transform: translateX(0);
+        }
+        
+        a div {
+            width: 225px;
+            height: 36px;
+            background-color: rgb(237, 255, 134);
+
+            @media (min-width: 1260px) {
+                width: 300px;
+                height: 40px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            position: relative;
+            transform: translateX(0);
+        }
+    }
+
+    /* Style the image slider */
+    .imageHolder {
+        position: relative;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: 992px) {
+            width: 768px;
+        }
+
+        @media (min-width: 1260px) {
+            width: 960px;
+        }        
+        img {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+
+            &.active {
+                animation: fadeIn 1s;
+                opacity: 1;
+            }
+            &.fadeOut {
+                animation: fadeOut 1s;
+                opacity: 0;
+            }
+        }
+        & > :nth-child(1) {
+            position: relative;
+        }
+        
+    }
+
+    .image-slide {
+        position: absolute;
+        top: 15px;
+        left: 300px;
+
+        & > img {
+            position: absolute;
+        }
+    }
+
+    .imageButtons {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        display: flex;
+        gap: 3px;
+        .button {
+            width: 30px;
+            height: 10px;
+            box-sizing: border-box;
+            border: 3px solid black;
+            background-color: black;
+            &.active {
+                background-color: red;
+            }   
+            @media (min-width: 768px) {
+                width: 40px;
+                height: 15px;
+                border: 4px solid black;
+            }         
+        }
+
+        @media (min-width: 992px) {
+            bottom: 12px;
+        }
+        @media (min-width: 1260px) {
+            bottom: 2px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
