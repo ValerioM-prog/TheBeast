@@ -55,7 +55,7 @@ function autoSlideShort() {
 
     }
     
-    else if (counter === slides.length-1) {
+    else if (counter === promoSlides.length-1) {
 
         promoSlides[counter-1].classList.remove('fadeOut');
         promoSlides[counter].classList.remove('active');

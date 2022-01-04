@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./_css/main.css">
-    <script src="./_js/productSlider.js" defer></script>
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <!-- <script src="./_js/productSlider.js" defer></script> -->
     <script src="./_js/burgerMenu.js" defer></script>
     <script src="./_js/slideShow.js" defer></script>
     <title>Document</title>
@@ -33,28 +34,44 @@
             <div class="right">
                 <!-- Search for tablet and greater start -->
                 <div class="searchBig">
-
+                    <input type="search" id="site-search" name="q"
+                        aria-label="Search through site content">
+                        <i class="fal fa-search"></i>
                 </div>
                 <!-- Search for tablet and greater end -->
                 <!-- Account start -->
-                <div class="account">
-
-                </div>
+                <a href="#">
+                    <div class="account">
+                        <i class="fal fa-user fa-lg"></i>
+                        <span>Account</span>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                </a>
                 <!-- Account end -->
                 <!-- Search Mobile start -->
-                <div class="searchMobile">
-
-                </div>
+                <a href="#">
+                    <div class="searchMobile">
+                        <i class="fal fa-search"></i>
+                    </div>
+                </a>
                 <!-- Search Mobile end-->
                 <!-- Favourites start -->
-                <div class="favourites">
-
-                </div>
+                <a href="#">
+                    <div class="favourites">
+                        <i class="fal fa-heart fa-lg"></i>
+                        <span>Favourites</span>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                </a>
                 <!-- Favourites end -->
                 <!-- Cart Button start -->
-                <div class="cartButton">
-
-                </div>
+                <a href="#">
+                    <div class="cartButton">
+                        <i class="far fa-shopping-cart fa-lg"></i>
+                        <span>Cart</span>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                </a>
                 <!-- Cart Button end -->
             </div>
             <!-- User Input end -->            
@@ -82,18 +99,18 @@
             <!-- Opaque background for menu on mobile devices end -->
             <!-- Main Menu start -->
             <nav class="mainMenu">
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
-                <a href="#"><div></div></a>
+                <a href="#"><div><i class="fal fa-mobile-android"></i><span>Laptops, Tablets & Phones</span></div></a>
+                <a href="#"><div><i class="fal fa-mouse"></i><span>PC, Periferics & Software</span></div></a>
+                <a href="#"><div><i class="fal fa-camera"></i><span>TV, Audio-Video & Photo</span></div></a>
+                <a href="#"><div><i class="fal fa-washer"></i><span>Household Items</span></div></a>
+                <a href="#"><div><i class="fal fa-gamepad"></i><span>Gaming, Books & Office Supplies</span></div></a>
+                <a href="#"><div><i class="fal fa-shopping-bag"></i><span>Groceries</span></div></a>
+                <a href="#"><div><i class="fal fa-tshirt"></i><span>Clothing</span></div></a>
+                <a href="#"><div><i class="fal fa-air-freshener"></i><span>Hygiene & Cosmetics</span></div></a>
+                <a href="#"><div><i class="fal fa-loveseat"></i><span>Home, Garden & DIY</span></div></a>
+                <a href="#"><div><i class="fal fa-baseball"></i><span>Sports</span></div></a>
+                <a href="#"><div><i class="fal fa-car-alt"></i><span>Auto & Moto</span></div></a>
+                <a href="#"><div><i class="fal fa-chess-knight"></i><span>Toys</span></div></a>
             </nav>
             <!-- Main Menu end -->
             <!-- Holder for image slider start -->
@@ -116,68 +133,77 @@
         </div>
         <!-- Main Menu and Picture Slider holder end -->
         <!-- Features slider start -->
-        <div class="slider feature">
-            <div class="inner-slider">
-                <div class="features">
-                    <span>24h Delivery</span>
+        <div class="browse">
+            <div class="slider features">            
+                <div class="feature">
+                    <span>You Can</span>
                 </div>
-                <div class="features">
-                    <span>Raffle IT!</span>
+                <div class="feature">
+                    <span>Slide These</span>
                 </div>
-                <div class="features">
-                    <span>Check on delivery</span>
+                <div class="feature">
+                    <span>Features On</span>
                 </div>
-                <div class="features">
-                    </i><span>Logo CARD from KNAB bank</span>
+                <div class="feature">
+                    <span>Mobile.</span>
                 </div>
-                <div class="features">
-                    <span>GIFT your Friends</span>
-                </div>
+                <div class="feature">
+                    <span>Thanks!</span>
+                </div>            
             </div>
         </div>
+        
         <!-- Features slider end -->
         
         <!-- Products slider start -->
-        <div class="slider product">
+        <div class="browse">
             <h1>Slide</h1>
-            <div class="inner-slider">
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
+            <div class="slider products">   
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>                 
+            </div>
+        </div>
+        
+        <!-- Product slider end -->
+
+        <!-- Products slider start -->
+        <div class="browse">
+            <h1>Slide</h1>
+            <div class="slider products">   
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>            
             </div>
         </div>
         <!-- Product slider end -->
 
         <!-- Products slider start -->
-        <div class="slider product">
+        <div class="browse">
             <h1>Slide</h1>
-            <div class="inner-slider">
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-            </div>
-        </div>
-        <!-- Product slider end -->
-
-        <!-- Products slider start -->
-        <div class="slider product">
-            <h1>Slide</h1>
-            <div class="inner-slider">
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
-                <div class="slide-product"></div>
+            <div class="slider products">   
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>            
             </div>
         </div>
         <!-- Product slider end -->
@@ -186,48 +212,39 @@
             <div class="accordion">
                 <div>
                     <input type="checkbox" name="example-accordion" id="section-services" class="accordion-input">
-                    <label for="section-services" class="accordion-label">Services</label>
+                    <label for="section-services" class="accordion-label">Who?</label>
                     <div class="accordion-content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Doloremque mollitia iure, accusamus deleniti earum nostrum 
-                            nam et aliquam eum enim non. Itaque sed possimus, similique 
-                            facilis aspernatur sapiente ipsum iusto.
+                        <p>Valerio Matei, <br>
+                            Programmer.
                         </p>
                     </div>
                 </div>
     
                 <div>
                     <input type="checkbox" name="example-accordion" id="section-orders" class="accordion-input">
-                    <label for="section-orders" class="accordion-label">Orders</label>
+                    <label for="section-orders" class="accordion-label">Why?</label>
                     <div class="accordion-content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Doloremque mollitia iure, accusamus deleniti earum nostrum 
-                            nam et aliquam eum enim non. Itaque sed possimus, similique 
-                            facilis aspernatur sapiente ipsum iusto.
+                        <p>I wanted to showcase my abilities as a web developer, even though I'm not a good designer, just yet.
                         </p>
                     </div>
                 </div>
     
                 <div>
                     <input type="checkbox" name="example-accordion" id="section-support" class="accordion-input">
-                    <label for="section-support" class="accordion-label">Support</label>
+                    <label for="section-support" class="accordion-label">How?</label>
                     <div class="accordion-content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Doloremque mollitia iure, accusamus deleniti earum nostrum 
-                            nam et aliquam eum enim non. Itaque sed possimus, similique 
-                            facilis aspernatur sapiente ipsum iusto.
+                        <p>Using HTML5, CSS3 and JS. <br>
+                            a
                         </p>
                     </div>
                 </div>
     
                 <div>
                     <input type="checkbox" name="example-accordion" id="section-tos" class="accordion-input">
-                    <label for="section-tos" class="accordion-label">Terms of Service</label>
+                    <label for="section-tos" class="accordion-label">Contact</label>
                     <div class="accordion-content">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Doloremque mollitia iure, accusamus deleniti earum nostrum 
-                            nam et aliquam eum enim non. Itaque sed possimus, similique 
-                            facilis aspernatur sapiente ipsum iusto.
+                        <p>You can reach me at GMAIL, YMAIL, Phone. <br>
+                            a
                         </p>
                     </div>
                 </div>
