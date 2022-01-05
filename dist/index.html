@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./_css/main.css">
     <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
-    <!-- <script src="./_js/productSlider.js" defer></script> -->
+    <script src="./_js/productSlider.js" defer></script>
     <script src="./_js/burgerMenu.js" defer></script>
     <script src="./_js/slideShow.js" defer></script>
     <title>Document</title>
@@ -43,8 +43,8 @@
                 <a href="#">
                     <div class="account">
                         <i class="fal fa-user fa-lg"></i>
-                        <span>Account</span>
-                        <i class="fas fa-sort-down"></i>
+                        <span>Account<i class="fas fa-sort-down"></i></span>
+                        
                     </div>
                 </a>
                 <!-- Account end -->
@@ -59,8 +59,8 @@
                 <a href="#">
                     <div class="favourites">
                         <i class="fal fa-heart fa-lg"></i>
-                        <span>Favourites</span>
-                        <i class="fas fa-sort-down"></i>
+                        <span>Favourites<i class="fas fa-sort-down"></i></span>
+                        
                     </div>
                 </a>
                 <!-- Favourites end -->
@@ -68,8 +68,8 @@
                 <a href="#">
                     <div class="cartButton">
                         <i class="far fa-shopping-cart fa-lg"></i>
-                        <span>Cart</span>
-                        <i class="fas fa-sort-down"></i>
+                        <span>Cart<i class="fas fa-sort-down"></i></span>
+                        
                     </div>
                 </a>
                 <!-- Cart Button end -->
@@ -99,18 +99,224 @@
             <!-- Opaque background for menu on mobile devices end -->
             <!-- Main Menu start -->
             <nav class="mainMenu">
-                <a href="#"><div><i class="fal fa-mobile-android"></i><span>Laptops, Tablets & Phones</span></div></a>
-                <a href="#"><div><i class="fal fa-mouse"></i><span>PC, Periferics & Software</span></div></a>
-                <a href="#"><div><i class="fal fa-camera"></i><span>TV, Audio-Video & Photo</span></div></a>
-                <a href="#"><div><i class="fal fa-washer"></i><span>Household Items</span></div></a>
-                <a href="#"><div><i class="fal fa-gamepad"></i><span>Gaming, Books & Office Supplies</span></div></a>
-                <a href="#"><div><i class="fal fa-shopping-bag"></i><span>Groceries</span></div></a>
-                <a href="#"><div><i class="fal fa-tshirt"></i><span>Clothing</span></div></a>
-                <a href="#"><div><i class="fal fa-air-freshener"></i><span>Hygiene & Cosmetics</span></div></a>
-                <a href="#"><div><i class="fal fa-loveseat"></i><span>Home, Garden & DIY</span></div></a>
-                <a href="#"><div><i class="fal fa-baseball"></i><span>Sports</span></div></a>
-                <a href="#"><div><i class="fal fa-car-alt"></i><span>Auto & Moto</span></div></a>
-                <a href="#"><div><i class="fal fa-chess-knight"></i><span>Toys</span></div></a>
+                <ul>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-mobile-android"></i>   <span>Laptops, Tablets & Phones</span>   </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Laptops, Tablets & Phones</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-mouse"></i>   <span>PC, Periferics & Software</span>            </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>PC, Periferics & Software</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-camera"></i>  <span>TV, Audio-Video & Photo</span>           </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>TV, Audio-Video & Photo</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-washer"></i>  <span>Household Items</span>           </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Household Items</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-gamepad"></i> <span>Gaming, Books & Office Supplies</span>          </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Gaming, Books & Office Supplies</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-shopping-bag"></i>    <span>Groceries</span>     </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Groceries</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-tshirt"></i>  <span>Clothing</span>           </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Clothing</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-air-freshener"></i>   <span>Hygiene & Cosmetics</span>    </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Hygiene & Cosmetics</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-loveseat"></i>    <span>Home, Garden & DIY</span>         </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Home, Garden & DIY</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-baseball"></i>    <span>Sports</span>         </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Sports</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-car-alt"></i> <span>Auto & Moto</span>          </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Auto & Moto</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="open-submenu">    <a href="#">    <div class="mainMenu-item"> <i class="fal fa-chess-knight"></i>    <span>Toys</span>     </div> </a> 
+                        <nav class="submenu">
+                            <ul>
+                                <li class="close-submenu"> <a href="#">    <div class="submenu-item">    <i class="fas fa-chevron-left"></i>  <span>Toys</span>   </div>     </a>     </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </nav>
+                    </li>
+                </ul>
             </nav>
             <!-- Main Menu end -->
             <!-- Holder for image slider start -->
@@ -157,8 +363,9 @@
         
         <!-- Products slider start -->
         <div class="browse">
-            <span>Slide</span>
-            <div class="slider products">   
+            <span>Slide</span>    
+            <div class="button-left">   <i class="fas fa-chevron-left fa-lg"></i> </div>    
+            <div class="slider products">
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
@@ -172,39 +379,58 @@
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
-                <div class="product"></div>                 
-            </div>
+                <div class="product"></div>   
+            </div>   
+            <div class="button-right">  <i class="fas fa-chevron-right fa-lg"></i>    </div>          
         </div>
         
         <!-- Product slider end -->
 
         <!-- Products slider start -->
         <div class="browse">
-            <span>Slide</span>
-            <div class="slider products">   
+            <span>Slide</span>    
+            <div class="button-left">   <i class="fas fa-chevron-left fa-lg"></i> </div>        
+            <div class="slider products">
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
-                <div class="product"></div>            
-            </div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>   
+            </div>   
+            <div class="button-right">  <i class="fas fa-chevron-right fa-lg"></i>    </div>         
         </div>
         <!-- Product slider end -->
 
         <!-- Products slider start -->
         <div class="browse">
-            <span>Slide</span>
-            <div class="slider products">   
+            <span>Slide</span>    
+            <div class="button-left">   <i class="fas fa-chevron-left fa-lg"></i> </div>        
+            <div class="slider products">
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
                 <div class="product"></div>
-                <div class="product"></div>            
-            </div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+                <div class="product"></div>   
+            </div>   
+            <div class="button-right">  <i class="fas fa-chevron-right fa-lg"></i>    </div>        
         </div>
         <!-- Product slider end -->
 
@@ -258,7 +484,7 @@
                         <p>You can reach me at: <br>
                              splice9000@gmail.com <br>
                              mateivalerio@yahoo.com <br>
-                             Tel: +40735775993.
+                             Tel: +40735775993. 
                         </p>
                     </div>
                 </div>

@@ -9,21 +9,24 @@
         max-width: 100%;
         border-radius: 5px;
         background: #009578;
+        font-weight: bold;
         display: grid;
 
-        div {
+        & + div {
             width: 100%;
+            height: 100%;
+            box-sizing: border-box;
         }
 
         .accordion-label {
             padding: 14px 20px;
             display: block;
-            color: #ffffff;
+            color: white;
             font-weight: 500;
             cursor: pointer;
             position: relative;
             transition: background .1s;
-            font-size: 1.3em;
+            font-size: 2em;
             &:hover {
                 background: rgba(0, 0, 0, .1);
             }
@@ -39,6 +42,9 @@
                 background-size: contain;
                 transition: transform .4s;
             }
+            @media (min-width: 768px) {
+                color: #009578;
+            }
         }
 
         .accordion-content {
@@ -49,6 +55,7 @@
             display: none;
 
             & > p {
+                height: 100%;
                 padding: 14px 5px;
             }
         }
@@ -80,6 +87,9 @@
                     display: none;
                 }
             }
+        }
+        @media (min-width: 768px) {
+            background: white;
         }
         @media (min-width: 992px) {
             max-width: 992px;

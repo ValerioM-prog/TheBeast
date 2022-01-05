@@ -1,6 +1,42 @@
 .browse {
+    position: relative;
     display: grid;
     grid-template-rows: 2;
+
+    .button-left,
+    .button-right {
+        display: none;
+
+        @media (min-width: 1260px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            position: absolute;
+            top: 50%;            
+            background-color: rgba(128, 128, 128, 0.7);
+            box-sizing: border-box;
+            border: 1px solid blue;
+            width: 30px;
+            height: 60px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        & > i {
+            color: blue;
+        }
+    }
+
+    .button-left {
+        left: 0;
+    }
+
+    .button-right {
+        right: 0;
+    }
 
     & > span {
         grid-row: 1;
@@ -39,13 +75,16 @@
         &::-webkit-scrollbar{
             display: none;
         }
+
+        
     
         @media (min-width: 992px) {
             max-width: 992px;
             margin-bottom: 18px;
         }
         @media (min-width: 1260px) {
-            max-width: 1260px;        
+            max-width: 1260px; 
+            overflow-x: scroll;       
         }
         .product {
             min-width: 132px;

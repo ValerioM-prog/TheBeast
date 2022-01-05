@@ -214,42 +214,104 @@
         &.open {
             transform: translateX(0);
         }
-        
-        a {
-            text-decoration: none;
-            font-size: 13.5px;
-            
-            div {
-                width: 225px;
-                height: 36px;
-                background-color: white;
-                box-sizing: border-box;
-                border-bottom: 1px solid black;
+
+        ul {
+            list-style: none;
+            width: 280px;
+            height: 100%;
+            background-color: white;
+
+            li {
+                height: 40px;
+                width: 100%;
                 display: flex;
                 justify-content: left;
                 align-items: center;
 
-                @media (min-width: 1260px) {
-                    width: 300px;
-                    height: 40px;
-                    font-size: 16px;
+                a {
+                    text-decoration: none;
+
+                    .mainMenu-item {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            min-width: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                 
                 }
 
-                i {
-                    width: 30px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                nav.submenu {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateX(-100%);
+                    transition: transform .5s ease-in;
+                    width: 100%;
+                    background-color: purple;
 
-                    @media (min-width: 1260px) {
-                        width: 40px;
-                        
+                    ul {
+                        background-color: black;
+
+                        li {
+                            height: 40px;
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            
+                            a {
+                                text-decoration: none;
+                                color: white;
+
+                                .submenu-item {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i {
+                                        min-width: 40px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                        }
                     }
-                    
+                    &.open {
+                        transform: translateX(0);
+                    } 
+
+                    @media (min-width: 992px) {
+                        left: 100%;
+                        width: 767px;
+                        transform: translateX(0);
+                        display: none;
+                    }
+                    @media (min-width: 1260px) {
+                        width: 960px;
+                    }
+                }
+
+                &:hover nav.submenu {
+                    display: block;
                 }
             }
-        }
 
+            @media (min-width: 992px) {
+                width: 240px;
+            }
+            @media (min-width: 1260px) {
+                width: 300px;
+            }
+        }
+        
         @media (min-width: 992px) {
             position: relative;
             transform: translateX(0);

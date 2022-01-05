@@ -1,84 +1,32 @@
-let slides = document.querySelectorAll(".inner-slider");
-let sliders = document.querySelectorAll(".slider");
+let buttonLeft = document.querySelectorAll('.button-left');
+let buttonRight = document.querySelectorAll('.button-right');
+let sliders = document.querySelectorAll('.products');
 
-let posX1,
-    posX2,
-    posY1,
-    posY2,
-    dX,
-    dY,
-    e,
-    current,
-    dirDetected = false;
-  //feature detection
-let passiveIfSupported = false;
 
-try {
-    window.addEventListener("test", null, Object.defineProperty({}, "passive", {
-        get: function() {passiveIfSupported = {passive: false};}
-    }));
-} catch(err) {}
-
-  
-for (let index = 0; index < slides.length; index++) {
-    slides[index].addEventListener("touchstart", (event)=>{
-        e = event;
-        current = index;
-        dragStart(e, current);
-    }, passiveIfSupported);
-    slides[index].addEventListener("touchmove", (event)=>{
-        e = event;
-        current = index;
-        dragAction(e, current);
-    }, passiveIfSupported);
-    slides[index].addEventListener("touchend", (event)=>{
-        e = event;
-        current = index;
-        dragEnd(e, current);
-    }, false);
+for (let i = 0; i < sliders.length; i++) {
+  buttonLeft[i].onclick = function () {
+    sliders[i].scrollLeft -= 1260;
+    console.log(sliders[i]);
+  } 
 }
 
-function dragStart(e) {
-  posX1 = e.touches[0].clientX;
-  posY1 = e.touches[0].clientY;
-  
+for (let i = 0; i < sliders.length; i++) {
+  buttonRight[i].onclick = function () {
+    sliders[i].scrollLeft += 1260;
+  } 
 }
 
-function dragAction(e) {
-  posX2 = e.touches[0].clientX;
-  posY2 = e.touches[0].clientY;
-  dX = posX2 - posX1;
-  posX1 = e.touches[0].clientX;
-  dY = posY2 - posY1;
-  
-  if (!dirDetected) {
-    if (Math.abs(dY) > Math.abs(dX)) {
-        slides[current].removeEventListener("touchmove", dragAction, passiveIfSupported);
-      return;
-    }
-    e.preventDefault();
-  }
-  
-  dirDetected = true;
-  slides[current].style.left = (slides[current].offsetLeft + dX) + "px";
-  checkBoundary(current);
-}
 
-  function dragEnd() {
-    if (!dirDetected) {
-        slides[current].addEventListener("touchmove", dragAction, passiveIfSupported);
-    }
-    dirDetected = false;
-  }
 
-  function checkBoundary(current) {
-    let outer = sliders[current].getBoundingClientRect();
-    let inner = slides[current].getBoundingClientRect();
 
-    if (parseInt(slides[current].style.left) > 0) {
-      slides[current].style.left = '0px';
-    }
-    if (inner.right < outer.right) {
-      slides[current].style.left = `-${inner.width - outer.width}px`;
-    }
-}
+// for (i = 0; i < buttonLeft.length; i++) {
+//   buttonLeft[i].onclick = function () {
+//     sliders[i].scrollLeft += 20;
+//   }
+// }
+
+// for (i = 0; i < buttonRight.length; i++) {
+//   buttonRight[i].onclick = function () {
+//     sliders[i].scrollLeft += 20;
+//   }
+// }

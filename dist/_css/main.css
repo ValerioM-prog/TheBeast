@@ -262,36 +262,94 @@
 .topHolder nav.mainMenu.open {
   transform: translateX(0);
 }
-.topHolder nav.mainMenu a {
-  text-decoration: none;
-  font-size: 13.5px;
-}
-.topHolder nav.mainMenu a div {
-  width: 225px;
-  height: 36px;
+.topHolder nav.mainMenu ul {
+  list-style: none;
+  width: 280px;
+  height: 100%;
   background-color: white;
-  box-sizing: border-box;
-  border-bottom: 1px solid black;
+}
+.topHolder nav.mainMenu ul li {
+  height: 40px;
+  width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
 }
-@media (min-width: 1260px) {
-  .topHolder nav.mainMenu a div {
-    width: 300px;
-    height: 40px;
-    font-size: 16px;
-  }
+.topHolder nav.mainMenu ul li a {
+  text-decoration: none;
 }
-.topHolder nav.mainMenu a div i {
-  width: 30px;
+.topHolder nav.mainMenu ul li a .mainMenu-item {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.topHolder nav.mainMenu ul li a .mainMenu-item i {
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topHolder nav.mainMenu ul li nav.submenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+  width: 100%;
+  background-color: purple;
+}
+.topHolder nav.mainMenu ul li nav.submenu ul {
+  background-color: black;
+}
+.topHolder nav.mainMenu ul li nav.submenu ul li {
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.topHolder nav.mainMenu ul li nav.submenu ul li a {
+  text-decoration: none;
+  color: white;
+}
+.topHolder nav.mainMenu ul li nav.submenu ul li a .submenu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topHolder nav.mainMenu ul li nav.submenu ul li a .submenu-item i {
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topHolder nav.mainMenu ul li nav.submenu.open {
+  transform: translateX(0);
+}
+@media (min-width: 992px) {
+  .topHolder nav.mainMenu ul li nav.submenu {
+    left: 100%;
+    width: 767px;
+    transform: translateX(0);
+    display: none;
+  }
+}
 @media (min-width: 1260px) {
-  .topHolder nav.mainMenu a div i {
-    width: 40px;
+  .topHolder nav.mainMenu ul li nav.submenu {
+    width: 960px;
+  }
+}
+.topHolder nav.mainMenu ul li:hover nav.submenu {
+  display: block;
+}
+@media (min-width: 992px) {
+  .topHolder nav.mainMenu ul {
+    width: 240px;
+  }
+}
+@media (min-width: 1260px) {
+  .topHolder nav.mainMenu ul {
+    width: 300px;
   }
 }
 @media (min-width: 992px) {
@@ -561,8 +619,43 @@
 }
 
 .browse {
+  position: relative;
   display: grid;
   grid-template-rows: 2;
+}
+.browse .button-left,
+.browse .button-right {
+  display: none;
+}
+@media (min-width: 1260px) {
+  .browse .button-left,
+.browse .button-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(128, 128, 128, 0.7);
+    box-sizing: border-box;
+    border: 1px solid blue;
+    width: 30px;
+    height: 60px;
+  }
+  .browse .button-left:hover,
+.browse .button-right:hover {
+    cursor: pointer;
+  }
+}
+.browse .button-left > i,
+.browse .button-right > i {
+  color: blue;
+}
+.browse .button-left {
+  left: 0;
+}
+.browse .button-right {
+  right: 0;
 }
 .browse > span {
   grid-row: 1;
@@ -609,6 +702,7 @@
 @media (min-width: 1260px) {
   .browse .slider {
     max-width: 1260px;
+    overflow-x: scroll;
   }
 }
 .browse .slider .product {
@@ -657,20 +751,23 @@
   max-width: 100%;
   border-radius: 5px;
   background: #009578;
+  font-weight: bold;
   display: grid;
 }
-.footer .accordion div {
+.footer .accordion + div {
   width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 .footer .accordion .accordion-label {
   padding: 14px 20px;
   display: block;
-  color: #ffffff;
+  color: white;
   font-weight: 500;
   cursor: pointer;
   position: relative;
   transition: background 0.1s;
-  font-size: 1.3em;
+  font-size: 2em;
 }
 .footer .accordion .accordion-label:hover {
   background: rgba(0, 0, 0, 0.1);
@@ -687,6 +784,11 @@
   background-size: contain;
   transition: transform 0.4s;
 }
+@media (min-width: 768px) {
+  .footer .accordion .accordion-label {
+    color: #009578;
+  }
+}
 .footer .accordion .accordion-content {
   width: 100%;
   background: #ffffff;
@@ -695,6 +797,7 @@
   display: none;
 }
 .footer .accordion .accordion-content > p {
+  height: 100%;
   padding: 14px 5px;
 }
 .footer .accordion .accordion-input {
@@ -719,6 +822,11 @@
   }
   .footer .accordion .accordion-label::after {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .footer .accordion {
+    background: white;
   }
 }
 @media (min-width: 992px) {
