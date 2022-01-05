@@ -688,12 +688,14 @@
   transition: transform 0.4s;
 }
 .footer .accordion .accordion-content {
-  padding: 14px 0;
   width: 100%;
   background: #ffffff;
   font-size: 1.2em;
   line-height: 1.6em;
   display: none;
+}
+.footer .accordion .accordion-content > p {
+  padding: 14px 5px;
 }
 .footer .accordion .accordion-input {
   display: none;

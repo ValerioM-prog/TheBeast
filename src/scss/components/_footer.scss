@@ -42,12 +42,15 @@
         }
 
         .accordion-content {
-            padding: 14px 0;
             width: 100%;
             background: #ffffff;
             font-size: 1.2em;
             line-height: 1.6em;
             display: none;
+
+            & > p {
+                padding: 14px 5px;
+            }
         }
 
         .accordion-input {
