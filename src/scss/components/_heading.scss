@@ -28,44 +28,4 @@
             }
         }
     }
-
-    .right {
-
-        a {
-            text-decoration: none;
-
-            .account {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                
-                & > span {
-                    margin-left: 5px;
-                }
-            }
-    
-            .favourites {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-    
-                & > span {
-                    margin-left: 5px;
-                }
-            }
-    
-            .cartButton {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-    
-                & > span {
-                    margin-left: 5px;
-                }
-            }
-        }
-
-        
-    }
 }
-

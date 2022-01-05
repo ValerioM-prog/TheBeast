@@ -15,18 +15,15 @@
             width: 100%;
         }
 
-        .accordion-label,
-        .accordion-content {
-            padding: 14px 20px;
-        }
-
         .accordion-label {
+            padding: 14px 20px;
             display: block;
             color: #ffffff;
             font-weight: 500;
             cursor: pointer;
             position: relative;
             transition: background .1s;
+            font-size: 1.3em;
             &:hover {
                 background: rgba(0, 0, 0, .1);
             }
@@ -45,9 +42,11 @@
         }
 
         .accordion-content {
+            padding: 14px 0;
+            width: 100%;
             background: #ffffff;
-            line-height: 1.6;
-            font-size: .85em;
+            font-size: 1.2em;
+            line-height: 1.6em;
             display: none;
         }
 
@@ -72,7 +71,6 @@
             }
 
             .accordion-label {
-                font-size: 1.5vw;
                 text-align: center;
 
                 &::after {
